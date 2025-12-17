@@ -5,12 +5,62 @@ Cheng Zhang, Boying Li, Meng Wei, Yan-Pei Cao, Camilo Cruz Gambardella, Dinh Phu
 
 ### [Paper](https://arxiv.org/abs/2512.07237) | [Video](https://youtu.be/DogzWyoVBEs)
 
-[![Watch the video](images/thumbnail.png)](https://youtu.be/DogzWyoVBEs)
-*Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers and offering a foundation for future camera-aware architectures.
-
 ## 🚀 TLDR
 
-📷 UCPE integrates **Relative Ray Encoding**—which delivers significantly better generalization than Plücker across diverse camera motion, intrinsics and lens distortions—with **Absolute Orientation Encoding** for controllable pitch and roll, enabling a unified camera representation for Transformers and state-of-the-art camera-controlled video generation with **less than 1% extra parameters**.
+🔥 **Camera-controlled text-to-video generation**, now with **intrinsics**, **distortion** and **orientation** control!
+
+<p align="center">
+  <img src="images/cameras.png"
+       alt="Camera lenses"
+       style="max-height:120px; width:auto; margin-right:16px;">
+  <img src="images/orientation.png"
+       alt="Orientation control"
+       style="max-height:140px; width:auto;">
+</p>
+
+📷 UCPE integrates **Relative Ray Encoding**—which delivers significantly better generalization than Plücker across diverse camera motion, intrinsics and lens distortions—with **Absolute Orientation Encoding** for controllable pitch and roll, enabling a unified camera representation for Transformers and state-of-the-art camera-controlled video generation with just **0.5% extra parameters** (35.5M over the 7.3B parameters of the base model)
+
+<p align="center">
+  <img src="images/video-ucpe.gif"
+       alt="UCPE"
+       style="max-height:480px; width:auto;">
+</p>
+
+## ✨ Highlights
+
+Our **Relative Ray Encoding** not only generalizes to but also enables controllability over a wide range of camera intrinsics and lens distortions.
+
+<p align="center">
+  <img src="images/video-lens.gif"
+       alt="Lens control"
+       style="max-height:480px; width:auto;">
+</p>
+
+Its geometry-consistent design further allows strong generalization and controllability over diverse camera motions.
+
+<p align="center">
+  <img src="images/video-pose.gif"
+       alt="Pose control"
+       style="max-height:480px; width:auto;">
+</p>
+
+We also introduce **Absolute Orientation Encoding** to eliminate the ambiguity in pitch and roll in previous T2V methods.
+
+<p align="center">
+  <img src="images/video-orientation.gif"
+       alt="Orientation control"
+       style="max-height:480px; width:auto;">
+</p>
+
+Watch the [video](https://youtu.be/DogzWyoVBEs) for more results!
+
+<p align="center">
+  <a href="https://youtu.be/DogzWyoVBEs">
+    <img src="images/thumbnail.png" alt="Watch the video" width="600">
+  </a>
+</p>
+
+*About the tittle: Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 🔔 Coming Soon
 
