@@ -10,12 +10,9 @@ Cheng Zhang, Boying Li, Meng Wei, Yan-Pei Cao, Camilo Cruz Gambardella, Dinh Phu
 🔥 **Camera-controlled text-to-video generation**, now with **intrinsics**, **distortion** and **orientation** control!
 
 <p align="center">
-  <img src="images/cameras.png"
-       alt="Camera lenses"
-       style="max-height:120px; width:auto; margin-right:16px;">
-  <img src="images/orientation.png"
-       alt="Orientation control"
-       style="max-height:140px; width:auto;">
+  <img src="images/cameras.png" alt="Camera lenses" height="120px">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="images/orientation.png" alt="Orientation control" height="140px">
 </p>
 
 📷 UCPE integrates **Relative Ray Encoding**—which delivers significantly better generalization than Plücker across diverse camera motion, intrinsics and lens distortions—with **Absolute Orientation Encoding** for controllable pitch and roll, enabling a unified camera representation for Transformers and state-of-the-art camera-controlled video generation with just **0.5% extra parameters** (35.5M over the 7.3B parameters of the base model)
