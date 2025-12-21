@@ -3,7 +3,10 @@
 ### Unified Camera Positional Encoding for Controlled Video Generation
 Cheng Zhang, Boying Li, Meng Wei, Yan-Pei Cao, Camilo Cruz Gambardella, Dinh Phung, Jianfei Cai
 
-### [Paper](https://arxiv.org/abs/2512.07237) | [Video](https://youtu.be/DogzWyoVBEs)
+### [Project Page](https://chengzhag.github.io/publication/ucpe/) | [Paper](https://arxiv.org/abs/2512.07237) | [Video](https://youtu.be/DogzWyoVBEs)
+
+[![Watch the video](images/thumbnail.png)](https://youtu.be/DogzWyoVBEs)
+*Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 🚀 TLDR
 
@@ -22,42 +25,6 @@ Cheng Zhang, Boying Li, Meng Wei, Yan-Pei Cao, Camilo Cruz Gambardella, Dinh Phu
        alt="UCPE"
        style="max-height:480px; width:auto;">
 </p>
-
-## ✨ Highlights
-
-Our **Relative Ray Encoding** not only generalizes to but also enables controllability over a wide range of camera intrinsics and lens distortions.
-
-<p align="center">
-  <img src="images/video-lens.gif"
-       alt="Lens control"
-       style="max-height:480px; width:auto;">
-</p>
-
-Its geometry-consistent design further allows strong generalization and controllability over diverse camera motions.
-
-<p align="center">
-  <img src="images/video-pose.gif"
-       alt="Pose control"
-       style="max-height:480px; width:auto;">
-</p>
-
-We also introduce **Absolute Orientation Encoding** to eliminate the ambiguity in pitch and roll in previous T2V methods.
-
-<p align="center">
-  <img src="images/video-orientation.gif"
-       alt="Orientation control"
-       style="max-height:480px; width:auto;">
-</p>
-
-Watch the [video](https://youtu.be/DogzWyoVBEs) for more results!
-
-<p align="center">
-  <a href="https://youtu.be/DogzWyoVBEs">
-    <img src="images/thumbnail.png" alt="Watch the video" width="600">
-  </a>
-</p>
-
-*About the tittle: Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 🔔 Coming Soon
 
@@ -86,7 +53,32 @@ Download our finetuned weights from [OneDrive](https://monashuni-my.sharepoint.c
 bash scripts/demo.sh
 ```
 
-The generated videos will be saved in `logs/6wodf04s/demo`.
+The generated videos will be saved in `logs/6wodf04s/demo`, examples shown below:
+
+* `demo/lens.json`: Our **Relative Ray Encoding** not only generalizes to but also enables controllability over a wide range of camera intrinsics and lens distortions.
+
+<p align="center">
+  <img src="images/video-lens.gif"
+       alt="Lens control"
+       style="max-height:480px; width:auto;">
+</p>
+
+* `demo/pose.json`: The geometry-consistent design of **Relative Ray Encoding** further allows strong generalization and controllability over diverse camera motions.
+
+<p align="center">
+  <img src="images/video-pose.gif"
+       alt="Pose control"
+       style="max-height:480px; width:auto;">
+</p>
+
+* `demo/teaser.json`: Our **Absolute Orientation Encoding** further eliminate the ambiguity in pitch and roll in previous T2V methods, enabling precise control over initial camera orientation.
+
+<p align="center">
+  <img src="images/video-orientation.gif"
+       alt="Orientation control"
+       style="max-height:480px; width:auto;">
+</p>
+
 
 ## 💡 Acknowledgements
 
