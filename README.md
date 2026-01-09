@@ -1,9 +1,7 @@
 # 📷 UCPE
 
 <p align="center">
-<h1 align="center">Self Forcing</h1>
-<h3 align="center">Unified Camera Positional Encoding for Controlled Video Generation</h3>
-</p>
+<h1 align="center">Unified Camera Positional Encoding for Controlled Video Generation</h1>
 <p align="center">
   <p align="center">
     <a href="https://chengzhag.github.io/">Cheng Zhang</a><sup>1</sup><sup>,2</sup>
@@ -21,7 +19,7 @@
     <a href="https://jianfei-cai.github.io/">Jianfei Cai</a><sup>1</sup><br>
     <sup>1</sup>Monash University <sup>2</sup>VAST
   </p>
-  <h3 align="center"><a href="https://arxiv.org/abs/2512.07237">Paper</a> | <a href="https://chengzhag.github.io/publication/ucpe/">Project Page</a> | <a href="https://youtu.be/DogzWyoVBEs">Video</a></h3>
+  <h2 align="center"><a href="https://arxiv.org/abs/2512.07237">Paper</a> | <a href="https://chengzhag.github.io/publication/ucpe/">Project Page</a> | <a href="https://youtu.be/DogzWyoVBEs">Video</a></h2>
 </p>
 
 [![Watch the video](images/thumbnail.png)](https://youtu.be/DogzWyoVBEs)
