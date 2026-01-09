@@ -10,14 +10,14 @@
     ·
     <a href="https://www.linkedin.com/in/meng-wei-66687a105/?originalSubdomain=au">Meng Wei</a><sup>1</sup>
     ·
-    <a href="https://yanpei.me/">Yan-Pei Cao</a><sup>2</sup>
+    <a href="https://yanpei.me/">Yan-Pei Cao</a><sup>3</sup>
     ·
-    <a href="https://www.monash.edu/mada/architecture/people/camilo-cruz-gambardella/">Camilo Cruz Gambardella</a><sup>1</sup>
+    <a href="https://www.monash.edu/mada/architecture/people/camilo-cruz-gambardella/">Camilo Cruz Gambardella</a><sup>1,2</sup>
     ·
     <a href="https://research.monash.edu/en/persons/dinh-phung/">Dinh Phung</a><sup>1</sup>
     ·
     <a href="https://jianfei-cai.github.io/">Jianfei Cai</a><sup>1</sup><br>
-    <sup>1</sup>Monash University <sup>2</sup>VAST
+    <sup>1</sup>Monash University <sup>2</sup>Building 4.0 CRC <sup>3</sup>VAST
   </p>
   <h2 align="center"><a href="https://arxiv.org/abs/2512.07237">Paper</a> | <a href="https://chengzhag.github.io/publication/ucpe/">Project Page</a> | <a href="https://youtu.be/DogzWyoVBEs">Video</a></h2>
 </p>
