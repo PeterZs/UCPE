@@ -19,7 +19,7 @@
     <a href="https://jianfei-cai.github.io/">Jianfei Cai</a><sup>1</sup><br>
     <sup>1</sup>Monash University <sup>2</sup>Building 4.0 CRC <sup>3</sup>VAST
   </p>
-  <h2 align="center"><a href="https://arxiv.org/abs/2512.07237">Paper</a> | <a href="https://chengzhag.github.io/publication/ucpe/">Project Page</a> | <a href="https://youtu.be/DogzWyoVBEs">Video</a></h2>
+  <h2 align="center"><a href="https://arxiv.org/abs/2512.07237">Paper</a> | <a href="https://chengzhag.github.io/publication/ucpe/">Project Page</a> | <a href="https://youtu.be/DogzWyoVBEs">Video</a></h2> | <h2 align="center"><a href="https://huggingface.co/datasets/chengzhag/PanShot">Hugging Face</a>
 </p>
 
 [![Watch the video](images/thumbnail.png)](https://youtu.be/DogzWyoVBEs)
