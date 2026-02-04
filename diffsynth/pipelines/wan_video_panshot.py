@@ -954,6 +954,12 @@ class WanVideoUnit_UCPECameraControl(PipelineUnit):
                 cam_emb = rearrange(absmap, "B T H W C -> B (T H W) C")
                 control_camera_dit_input["cam_emb"] = cam_emb
 
+                # ucpe.visualize_up_lat_map(
+                #     up_map[0, 0],
+                #     lat_map[0, 0],
+                #     "debug/rotmap/rotmap_overlay.png"
+                # )
+
             return {"control_camera_dit_input": control_camera_dit_input}
 
 

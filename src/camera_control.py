@@ -6,7 +6,9 @@ from diffsynth.models.wan_video_dit import flash_attention
 from einops import rearrange, repeat, einsum
 import torch.nn.functional as F
 from typing import Tuple
+import numpy as np
 from equilib.torch_utils import create_grid
+import os
 
 
 def patch_dit(pipe, method, height, width, attn_compress=1, adaptation_method="parallel"):
@@ -529,6 +531,40 @@ def compute_up_lat_map(
     lat_map = lat_map.masked_fill(mask_exp2, 0.0)
 
     return up_map, lat_map
+
+
+def visualize_up_lat_map(up_map: torch.Tensor, lat_map: torch.Tensor, save_path: str = None):
+    """
+    可视化 world-anchored 的 up_map 与 lat_map（GeoCalib-style overlay）。
+    仅依赖指定输入，其余设置在函数内固定。
+
+    Args:
+        up_map: [H, W, 2] 张量
+        lat_map: [H, W, 1] 张量
+        save_path: 保存文件路径
+    """
+    import matplotlib.pyplot as plt
+    from geocalib import viz2d
+
+    # --- 数据预处理 ---
+    up_vis = up_map.detach().float().cpu()       # [H, W, 2]
+    lat_vis = lat_map[..., 0].detach().float().cpu()  # [H, W]
+
+    # --- 绘图 ---
+    fig, ax = plt.subplots(figsize=(6, 4), dpi=200)
+    viz2d.plot_latitudes([lat_vis], axes=[ax])  # 绘制纬度热力图
+    viz2d.plot_vector_fields([up_vis.permute(2, 0, 1)], subsample=10, axes=[ax])  # 绘制up向量场
+
+    ax.set_axis_off()
+
+    # --- 保存结果 ---
+    if save_path is not None:
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        fig.canvas.draw()
+        fig.savefig(save_path, dpi=200, bbox_inches="tight")
+        plt.close(fig)
+    else:
+        return fig
 
 
 class UcpeSelfAttention(nn.Module):

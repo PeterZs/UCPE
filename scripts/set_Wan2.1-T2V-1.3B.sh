@@ -1,4 +1,5 @@
 for STAGE in FIT VALIDATE TEST PREDICT; do
+  export PL_${STAGE}__DATA="PanShotDataModule"
   export PL_${STAGE}__CKPT_PATH="last"
   export PL_${STAGE}__DATA__DATA_ROOT="data/UCPE"
   export PL_${STAGE}__MODEL__FPS=16
