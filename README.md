@@ -22,7 +22,7 @@
   <h2 align="center"><a href="https://arxiv.org/abs/2512.07237">Paper</a> | <a href="https://chengzhag.github.io/publication/ucpe/">Project Page</a> | <a href="https://youtu.be/rMX7gxH8jBM">Video</a> | <a href="https://huggingface.co/datasets/chengzhag/PanShot">Hugging Face</a></h2>
 </p>
 
-[![Watch the video](images/thumbnail.png)](https://youtu.be/DogzWyoVBEs)
+[![Watch the video](images/thumbnail.png)](https://youtu.be/rMX7gxH8jBM)
 *Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 📢 Updates
