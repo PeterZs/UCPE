@@ -1,13 +1,11 @@
 import torch
 from torch import nn
-from equilib.equi2pers.torch import ucm_unproject_grid  # 确保正确 import
 from thirdparty.prope.torch import PropeDotProductAttention
 from diffsynth.models.wan_video_dit import flash_attention
 from einops import rearrange, repeat, einsum
 import torch.nn.functional as F
 from typing import Tuple
 import numpy as np
-from equilib.torch_utils import create_grid
 import os
 
 
@@ -210,6 +208,7 @@ def ucm_unproject_grid_fov(
     fy = fx
 
     # --- 调用 ucm_unproject_grid ---
+    from equilib.equi2pers.torch import ucm_unproject_grid
     d_cam = ucm_unproject_grid(
         height=height,
         width=width,
@@ -299,7 +298,7 @@ def ray_condition_ucm(
     R = pose[..., :3, :3]      # [B, V, 3, 3]
     t = pose[..., :3, 3]       # [B, V, 3]
 
-    d_world = torch.einsum("bvij,bvhwj->bvhwi", R.transpose(-1, -2), d_cam)  # [B,V,H,W,3]
+    d_world = torch.einsum("bvij,bvhwj->bvhwi", R, d_cam)  # [B,V,H,W,3]
     rays_o = t[..., None, None, :].expand_as(d_world)  # [B,V,H,W,3]
 
     # --- 5. Plücker coordinates: m = o × d ---
@@ -509,6 +508,7 @@ def compute_up_lat_map(
         height=height,
         width=width,
     )
+    from equilib.torch_utils import create_grid
     grid = create_grid(
         height=height,
         width=width,

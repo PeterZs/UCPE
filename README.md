@@ -26,6 +26,7 @@
 *Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 📢 Updates
+- \[2026.03.19\] 🔧 Fixed a bug in Plücker encoding (thanks to [@fengq1a0](https://github.com/fengq1a0)'s [issue #5](https://github.com/chengzhag/UCPE/issues/5)).
 - \[2026.02.21\] 🎉 **UCPE accepted to CVPR 2026**
 - \[2026.02.04\] 📁 **PanShot Dataset And Curation Code** (controllable camera data synthesized from [PanFlow](https://github.com/chengzhag/PanFlow))
 - \[2026.02.04\] 🎯 **Full Training, Evaluation, Visualization Code**
