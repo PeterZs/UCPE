@@ -26,6 +26,7 @@
 *Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 📢 Updates
+- \[2026.04.12\] 📦 **Raw 4K Panoramic Videos** released on [HuggingFace](https://huggingface.co/datasets/chengzhag/UCPE) — skips CameraBench and PanFlow curation; also provides ERP videos for PanShot (YouTube now serves 360° videos in EAC format, breaking the original download script).
 - \[2026.03.19\] 🔧 Fixed a bug in Plücker encoding (thanks to [@fengq1a0](https://github.com/fengq1a0)'s [issue #5](https://github.com/chengzhag/UCPE/issues/5)).
 - \[2026.02.21\] 🎉 **UCPE accepted to CVPR 2026**
 - \[2026.02.04\] 📁 **PanShot Dataset And Curation Code** (controllable camera data synthesized from [PanFlow](https://github.com/chengzhag/PanFlow))
@@ -164,6 +165,13 @@ Please then copy the other files to form the following folder structure:
 <details>
 <summary>If you want to go through the dataset curation process, Please follow these three steps.</summary>
 
+> **Shortcut for steps 1 & 2:** You can skip the CameraBench and PanFlow curation steps by downloading our pre-processed data directly:
+> ```bash
+> huggingface-cli download --repo-type dataset chengzhag/UCPE --local-dir data/UCPE
+> cd data/UCPE && bash unpack_hf.sh && cd ../..
+> ```
+> Then proceed directly to step 3 (PanShot).
+
 ### CameraBench
 
 Download the dataset from multiple sources:
@@ -218,6 +226,8 @@ python tools/normalize_panflow.py  # set split = "train" and split = "test"
 
 
 ### PanShot
+
+> **Note:** YouTube recently changed its 360° video format from ERP (Equirectangular Projection) to EAC (Equi-Angular Cubemap). As a result, the video download part in `process_panshot.py` no longer works. Use the **Shortcut above** to download our pre-processed ERP videos first — `process_panshot.py` will then automatically skip the download step and proceed with the remaining processing.
 
 Export your YouTube cookies to `~/.config/cookies.txt` in Netscape format for 4k download. Then download and process the dataset:
 
