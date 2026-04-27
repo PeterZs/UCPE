@@ -8,7 +8,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path
 from datetime import datetime
 from typing import Any, List, Literal, Tuple, Optional, Dict
-from src.dataset import PanShotDataset, Re10kDataset
 from collections import defaultdict
 from torch.utils.data import DataLoader, Subset
 import json
@@ -80,6 +79,7 @@ def filter_jitter(args):
     if args.jitter_filter_percent >= 1.0:
         return
 
+    from src.dataset import PanShotDataset
     # Fix jittering rotation issue
     # Filter out videos with rapid rotations
     max_rotation_file = args.data_root / "PanShot" / "max_rotation-test.json"
@@ -108,7 +108,9 @@ def filter_jitter(args):
 
 
 def prepare_dataloader(args, load_keys, result_root=None, video_ids=None):
-    dataset_class = globals().get(args.data, None)
+    from src.dataset import PanShotDataset, Re10kDataset
+    _dataset_classes = {'PanShotDataset': PanShotDataset, 'Re10kDataset': Re10kDataset}
+    dataset_class = _dataset_classes.get(args.data, None)
 
     if dataset_class is PanShotDataset:
         valid_video_ids = filter_jitter(args)
