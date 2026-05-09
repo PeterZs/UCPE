@@ -170,7 +170,7 @@ Please then copy the other files to form the following folder structure:
 > huggingface-cli download --repo-type dataset chengzhag/UCPE --local-dir data/UCPE
 > cd data/UCPE && bash unpack_hf.sh && cd ../..
 > ```
-> Then proceed directly to step 3 (PanShot).
+> Note: step 3 (PanShot) still depends on the PanFlow dataset's videos and slam_poses, so you'll also need to download those following the instructions in the [PanFlow](#panflow) section below — only the processing scripts can be skipped.
 
 ### CameraBench
 
