@@ -180,3 +180,6 @@ wandb/
 *.pth
 /outputs
 /models
+
+# Ignore all dotfolders in repo root
+/.*/

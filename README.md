@@ -26,6 +26,7 @@
 *Our UCPE introduces a geometry-consistent alternative to Plücker rays as one of the core contributions, enabling better generalization in Transformers. We hope to inspire future research on camera-aware architectures.
 
 ## 📢 Updates
+- \[2026.05.14\] 🔥 **UCPE is used in [SANA-WM](https://nvlabs.github.io/Sana/WM/)**
 - \[2026.04.12\] 📦 **Raw 4K Panoramic Videos** released on [HuggingFace](https://huggingface.co/datasets/chengzhag/UCPE) — skips CameraBench and PanFlow curation; also provides ERP videos for PanShot (YouTube now serves 360° videos in EAC format, breaking the original download script).
 - \[2026.03.19\] 🔧 Fixed a bug in Plücker encoding (thanks to [@fengq1a0](https://github.com/fengq1a0)'s [issue #5](https://github.com/chengzhag/UCPE/issues/5)).
 - \[2026.02.21\] 🎉 **UCPE accepted to CVPR 2026**
